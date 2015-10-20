@@ -38,7 +38,7 @@ namespace TestingGear.Controllers
             {
                 var from = ConfigurationManager.AppSettings.Get("UserID");
                 var password = ConfigurationManager.AppSettings.Get("Password");
-                using (var email = new MailMessage(from, "info@highcontech.com"))
+                using (var email = new MailMessage(from, "highcontech@gmail.com"))
                 {
                     email.Subject = "Contact - " + subject;
                     email.Body = name + " sent a message from within the ganaf website. \nMessage Content: \n" + message + "\n\nEmail Address: " + uEmail;
