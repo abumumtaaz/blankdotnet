@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Configuration;
+using System.Net;
+using System.Net.Mail;
 using System.Web.Mvc;
 
 namespace TestingGear.Controllers
@@ -22,11 +22,58 @@ namespace TestingGear.Controllers
             return View();
         }
 
+
+        [HttpGet]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Contact(string name, string uEmail, string subject, string message)
+        {
+            try
+            {
+                var from = ConfigurationManager.AppSettings.Get("UserID");
+                var password = ConfigurationManager.AppSettings.Get("Password");
+                using (var email = new MailMessage(from, "info@highcontech.com"))
+                {
+                    email.Subject = "Contact - " + subject;
+                    email.Body = name + " sent a message from within the ganaf website. \nMessage Content: \n" + message + "\n\nEmail Address: " + uEmail;
+                    email.IsBodyHtml = false;
+                    var smtp = new SmtpClient
+                    {
+                        Host = "smtp.gmail.com",
+                        EnableSsl = true
+                    };
+                    var networkCredential = new NetworkCredential(from, password);
+                    smtp.UseDefaultCredentials = true;
+                    smtp.Credentials = networkCredential;
+                    smtp.Port = 587;
+                    smtp.Send(email);
+                    ViewBag.Status = "SUCCESS";
+                    ViewBag.StatusMessage = "Message successfully sent";
+
+                }
+            }
+            catch (Exception)
+            {
+                ViewBag.Status = "ERROR";
+                ViewBag.StatusMessage = "Something went wrong. Please retry.";
+            }
+            return View();
+        }
+
+        public ActionResult Services()
+        {
+            return View();
+        }
+
+        public ActionResult Products()
+        {
+            return null;
         }
     }
 }

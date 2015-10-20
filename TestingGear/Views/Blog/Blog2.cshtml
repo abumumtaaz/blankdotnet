@@ -1,0 +1,281 @@
+﻿@section featured
+{
+    <!-- breadcrumb start -->
+    <!-- ================ -->
+    <div class="breadcrumb-container">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><i class="fa fa-home pr-10"></i><a href="/Home/Index">Home</a></li>
+                <li class="active">Blog Post</li>
+            </ol>
+        </div>
+    </div>
+    <!-- breadcrumb end -->
+
+    <!-- main-container start -->
+    <!-- ================ -->
+    <section class="main-container">
+
+        <div class="container">
+            <div class="row">
+
+                <!-- main start -->
+                <!-- ================ -->
+                <div class="main col-md-8">
+
+                    <!-- page-title start -->
+                    <!-- ================ -->
+                    <h1 class="page-title">How to partition Hard Disk Drive (HDD)</h1>
+                    <!-- page-title end -->
+
+                    <!-- blogpost start -->
+                    <!-- ================ -->
+                    <article class="blogpost full">
+                        <header>
+                            <div class="post-info">
+                                <span class="post-date">
+                                    <i class="icon-calendar"></i>
+                                    <span class="day">12</span>
+                                    <span class="month">May 2015</span>
+                                </span>
+                                <span class="submitted"><i class="icon-user-1"></i>by <a href="#">Admin</a></span>
+                                @*<span class="comments"><i class="icon-chat"></i><a href="#">22 comments</a></span>*@
+                            </div>
+                        </header>
+                        <div class="blogpost-content">
+                            <div id="carousel-blog-post" class="carousel slide mb-20" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-blog-post" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-blog-post" data-slide-to="1"></li>
+                                    <li data-target="#carousel-blog-post" data-slide-to="2"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <div class="overlay-container">
+                                            <img src="~/Content/images/hdd-1.jpg" alt="">
+                                            <a class="overlay-link popup-img" href="~/Content/images/hdd-1.jpg"><i class="fa fa-search-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="overlay-container">
+                                            <img src="~/Content/images/hdd-2.jpg" alt="">
+                                            <a class="overlay-link popup-img" href="~/Content/images/hdd-2.jpg"><i class="fa fa-search-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="overlay-container">
+                                            <img src="~/Content/images/hdd-3.jpg" alt="">
+                                            <a class="overlay-link popup-img" href="~/Content/images/hdd-3.jpg"><i class="fa fa-search-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                Follow patiently the underlisted steps to partition your hard drive
+                            </p>
+                            <ol>
+                                <li>
+                                    <p>Right click on the drive you wish to partition e.g. C</p>
+                                    <p>
+                                        NB: To create a partition, you are going to “shrink” out some of the free spaces on an existing partition.
+                                        Wait a minute, did I just say shrink? Yap, that’s the word, you are going to shrink it.
+                                        So if you have a drive of 300GB (as an example) probably as your C,
+                                        then you can shrink out 100GB and call that F or some other letter you wish,
+                                        you would now have two drives: C which would now be 200GB and F (or something else) which would be 100GB.
+                                    </p>
+                                </li>
+
+                                <li>Choose “shrink volume” and wait for Windows to query your volume for available shrink space.</li>
+                                <li>Once this is done you should have an interface similar to the one below:
+                                    <img src="~/Content/images/hdd partition.jpg" alt="partition-image" />
+                                    <p>
+                                        From this interface you can decide the amount of space you want to shrink out in MB.
+                                        Notice that a maximum value has been set by Windows and you can’t exceed that value.
+                                    </p>
+                                </li>
+                                <li>Once you have decided the amount of space to shrink, click on “Shrink” and the partition is created.</li>
+                                <li>Once the partition is created, you would see it listed among the partitions you have
+                                    coloured in black; this implies it is still unallocated.
+                                    Right click on this unallocated partition and choose “New simple volume”.</li>
+                                <li>Follow the wizard and just click “next” until “finish” and the new partition is created.
+                                    One of the interfaces you would see in the wizard is an option for you to choose the drive letter,
+                                    a default letter is assigned which you can change to whichever letter you wish to use.</li>
+
+                            </ol>
+                            <p>You have successfully partitioned your hard disk drive.</p>
+                        </div>
+                        @*<footer class="clearfix">
+                            <div class="tags pull-left"><i class="icon-tags"></i><a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
+                            <div class="link pull-right">
+                                <ul class="social-links circle small colored clearfix margin-clear text-right animated-effect-1">
+                                    <li class="twitter"><a target="_blank" href="http://www.twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="googleplus"><a target="_blank" href="http://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class="facebook"><a target="_blank" href="http://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                </ul>
+                            </div>
+                        </footer>*@
+                    </article>
+                    <!-- blogpost end -->
+
+                    <!-- comments start -->
+                    <!-- ================ -->
+                    @*<div id="comments" class="comments">
+                        <h2 class="title">There are 3 comments</h2>
+
+                        <!-- comment start -->
+                        <div class="comment clearfix">
+                            <div class="comment-avatar">
+                                <img class="img-circle" src="~/Content/images/avatar.jpg" alt="avatar">
+                            </div>
+                            <header>
+                                <h3>Comment title</h3>
+                                <div class="comment-meta">By <a href="#">admin</a> | Today, 12:31</div>
+                            </header>
+                            <div class="comment-content">
+                                <div class="comment-body clearfix">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
+                                    <a href="blog-post.html" class="btn-sm-link link-dark pull-right"><i class="fa fa-reply"></i>Reply</a>
+                                </div>
+                            </div>
+
+                            <!-- comment start -->
+                            <div class="comment clearfix">
+                                <div class="comment-avatar">
+                                    <img class="img-circle" src="~/Content/images/avatar.jpg" alt="avatar">
+                                </div>
+                                <header>
+                                    <h3>Comment title</h3>
+                                    <div class="comment-meta">By <a href="#">admin</a> | Today, 12:31</div>
+                                </header>
+                                <div class="comment-content">
+                                    <div class="comment-body clearfix">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
+                                        <a href="blog-post.html" class="btn-sm-link link-dark pull-right"><i class="fa fa-reply"></i>Reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- comment end -->
+
+                        </div>
+                        <!-- comment end -->
+
+                        <!-- comment start -->
+                        <div class="comment clearfix">
+                            <div class="comment-avatar">
+                                <img class="img-circle" src="~/Content/images/avatar.jpg" alt="avatar">
+                            </div>
+                            <header>
+                                <h3>Comment title</h3>
+                                <div class="comment-meta">By <a href="#">admin</a> | Today, 12:31</div>
+                            </header>
+                            <div class="comment-content">
+                                <div class="comment-body clearfix">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
+                                    <a href="blog-post.html" class="btn-sm-link link-dark pull-right"><i class="fa fa-reply"></i>Reply</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- comment end -->
+
+                    </div>
+                    <!-- comments end -->
+
+                    <!-- comments form start -->
+                    <!-- ================ -->
+                    <div class="comments-form">
+                        <h2 class="title">Add your comment</h2>
+                        <form role="form" id="comment-form">
+                            <div class="form-group has-feedback">
+                                <label for="name4">Name</label>
+                                <input type="text" class="form-control" id="name4" placeholder="" name="name4" required>
+                                <i class="fa fa-user form-control-feedback"></i>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label for="subject4">Subject</label>
+                                <input type="text" class="form-control" id="subject4" placeholder="" name="subject4" required>
+                                <i class="fa fa-pencil form-control-feedback"></i>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label for="message4">Message</label>
+                                <textarea class="form-control" rows="8" id="message4" placeholder="" name="message4" required></textarea>
+                                <i class="fa fa-envelope-o form-control-feedback"></i>
+                            </div>
+                            <input type="submit" value="Submit" class="btn btn-default">
+                        </form>
+                    </div>
+                    <!-- comments form end -->
+                </div>*@
+                    <!-- main end -->
+
+
+                </div>
+
+
+                <!-- sidebar start -->
+                <!-- ================ -->
+                <aside class="col-md-4 col-lg-3 col-lg-offset-1">
+                    <div class="block clearfix">
+                        <h3 class="title">Latest News</h3>
+                        <div class="separator-2"></div>
+                        <div class="media margin-clear">
+                            <div class="media-left">
+                                <div class="overlay-container">
+                                    <img class="media-object" src="~/Content/images/blog-1-thumb.jpg" alt="blog-thumb">
+                                    <a href="/Blog/blog1" class="overlay-link small"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="media-heading"><a href="/Blog/blog1">Making USB Bootable</a></h6>
+                                <p class="small margin-clear"><i class="fa fa-calendar pr-10"></i>Mar 23, 2015</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="media margin-clear">
+                            <div class="media-left">
+                                <div class="overlay-container">
+                                    <img class="media-object" src="~/Content/images/hdd-2-thumb.jpg" alt="blog-thumb">
+                                    <a href="/Blog/blog2" class="overlay-link small"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="media-heading"><a href="/Blog/blog2">Hard disk partition</a></h6>
+                                <p class="small margin-clear"><i class="fa fa-calendar pr-10"></i>Mar 22, 2015</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="media margin-clear">
+                            <div class="media-left">
+                                <div class="overlay-container">
+                                    <img class="media-object" src="~/Content/images/vci-2-thumb.jpg" alt="blog-thumb">
+                                    <a href="/Blog/blog3" class="overlay-link small"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="media-heading"><a href="/Blog/blog3">Distributed Version Control</a></h6>
+                                <p class="small margin-clear"><i class="fa fa-calendar pr-10"></i>Mar 21, 2015</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="media margin-clear">
+                            <div class="media-left">
+                                <div class="overlay-container">
+                                    <img class="media-object" src="~/Content/images/virus-2-thumb.jpg" alt="blog-thumb">
+                                    <a href="/Blog/blog4" class="overlay-link small"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h6 class="media-heading"><a href="/Blog/blog4">Computer Virus</a></h6>
+                                <p class="small margin-clear"><i class="fa fa-calendar pr-10"></i>Mar 21, 2015</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <!-- sidebar end -->
+            </div>
+        </div>
+    </section>
+    <!-- main-container end -->
+}
