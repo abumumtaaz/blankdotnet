@@ -162,7 +162,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -411,10 +410,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Blog\Blog1.cshtml" />
-    <Content Include="Views\Blog\Blog2.cshtml" />
-    <Content Include="Views\Blog\Blog3.cshtml" />
-    <Content Include="Views\Blog\Blog4.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
   </ItemGroup>
   <ItemGroup>

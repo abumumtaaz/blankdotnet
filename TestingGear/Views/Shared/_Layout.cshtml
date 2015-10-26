@@ -262,7 +262,7 @@
                                                 <!-- main-menu end -->
 
                                                 <!-- header dropdown buttons -->
-                                                
+
 
                                             </div>
 
@@ -290,25 +290,7 @@
 
         <!-- footer top start -->
         <!-- ================ -->
-        <div class="dark-bg  default-hovered footer-top animated-text">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="call-to-action text-center">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2>Highcon Technologies</h2>
-                                    <h2>We make the best software solutions</h2>
-                                </div>
-                                <div class="col-sm-4">
-                                    <p class="mt-10"><a href="/Home/Contact" class="btn btn-animated btn-lg btn-gray-transparent ">Contact us<i class="fa fa-coffee pl-20"></i></a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @RenderSection("footerTop", required: false)
         <!-- footer top end -->
         <!-- ================ -->
         <footer id="footer" class="clearfix ">
@@ -319,17 +301,19 @@
                 <div class="container">
                     <div class="footer-inner">
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="footer-content">
+                                    <h2 class="title">Get To know Us</h2>
+                                    <div class="separator-2"></div>
                                     <div class="logo-footer">
                                         @*<img id="logo-footer" src="~/Content/images/logo_light_blue.png" alt="">*@
                                     </div>
                                     <p>
                                         Highcon technologies is an indigenous IT firm that provides state of the art software solutions.
-									        Our core values are creativity, productivity, experience and knowledge.
-                                            We are backed by several years of experience.
-                                           
-                                    <a href="/Home/About">Learn More<i class="fa fa-long-arrow-right pl-5"></i></a>
+                                        Our core values are creativity, productivity, experience and knowledge.
+                                        We are backed by several years of experience.
+
+                                        <a href="/Home/About">Learn More<i class="fa fa-long-arrow-right pl-5"></i></a>
                                     </p>
                                     <div class="separator-2"></div>
                                     <nav>
@@ -342,7 +326,8 @@
                                     </nav>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="">
+                                <!--
                                 <div class="footer-content">
                                     <h2 class="title">Latest From Blog</h2>
                                     <div class="separator-2"></div>
@@ -355,7 +340,8 @@
                                         </div>
                                         <div class="media-body">
                                             <h6 class="media-heading"><a href="/Blog/blog1">Making USB Bootable</a></h6>
-                                            <p class="small margin-clear"><i class="fa fa-calendar pr-10"></i>Mar 23, 2015</p>
+                                            <p class="small margin-clear"><i class="fa fa-calendar pr-10"></i>Mar 23, 2015
+                                            </p>
                                         </div>
                                         <hr>
                                     </div>
@@ -368,7 +354,8 @@
                                         </div>
                                         <div class="media-body">
                                             <h6 class="media-heading"><a href="/Blog/blog2">Hard disk partition</a></h6>
-                                            <p class="small margin-clear"><i class="fa fa-calendar pr-10"></i>Mar 22, 2015</p>
+                                            <p class="small margin-clear"><i class="fa fa-calendar pr-10"></i>Mar 22, 2015
+                                            </p>
                                         </div>
                                         <hr>
                                     </div>
@@ -381,7 +368,8 @@
                                         </div>
                                         <div class="media-body">
                                             <h6 class="media-heading"><a href="/Blog/blog3">Distributed Version Control</a></h6>
-                                            <p class="small margin-clear"><i class="fa fa-calendar pr-10"></i>Mar 21, 2015</p>
+                                            <p class="small margin-clear"><i class="fa fa-calendar pr-10"></i>Mar 21, 2015
+                                            </p>
                                         </div>
                                         <hr>
                                     </div>
@@ -394,15 +382,17 @@
                                         </div>
                                         <div class="media-body">
                                             <h6 class="media-heading"><a href="/Blog/blog4">Computer Virus</a></h6>
-                                            <p class="small margin-clear"><i class="fa fa-calendar pr-10"></i>Mar 21, 2015</p>
+                                            <p class="small margin-clear"><i class="fa fa-calendar pr-10"></i>Mar 21, 2015
+                                            </p>
                                         </div>
                                     </div>
                                     @*<div class="text-right space-top">
                                         <a href="blog-large-image-right-sidebar.html" class="link-dark"><i class="fa fa-plus-circle pl-5 pr-5"></i>More</a>
                                     </div>*@
-                                </div>
+                                </div> -->
+
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="footer-content">
                                     <h2 class="title">Portfolio Gallery</h2>
                                     <div class="separator-2"></div>
@@ -423,7 +413,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="col-xs-4 col-md-6">
                                             <div class="overlay-container mb-10">
                                                 <img src="~/Content/images/gallery-4.jpg" alt="">
@@ -462,7 +452,7 @@
                                     </div>*@
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="footer-content">
                                     <h2 class="title">Find Us</h2>
                                     <div class="separator-2"></div>
@@ -633,6 +623,34 @@
         </div>
     </div>
     <!-- Color Switcher End -->
+
+    <!-- Pure chat script -->
+    <script type='text/javascript' data-cfasync='false'>
+        window.purechatApi = {
+            l: [],
+            t: [],
+            on: function () {
+                this.l.push(arguments);
+            }
+        }; (function () {
+            var done = false;
+            var script = document.createElement('script');
+            script.async = true;
+            script.type = 'text/javascript';
+            script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript';
+            document.getElementsByTagName('HEAD').item(0).appendChild(script);
+            script.onreadystatechange = script.onload = function (e) {
+                if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+                    var w = new PCWidget(
+                    {
+                        c: 'a1e49c0a-064e-414b-b061-96baaac539d7',
+                        f: true
+                    });
+                    done = true;
+                }
+            };
+        })();
+    </script>
 </body>
 
 <!-- Mirrored from htmlcoder.me/preview/the_project/v.1.0/template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Jun 2015 23:43:34 GMT -->
