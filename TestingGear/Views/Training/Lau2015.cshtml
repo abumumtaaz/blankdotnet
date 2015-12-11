@@ -300,41 +300,6 @@
             $('#selected-courses').val(res);
             $('#regForm').submit();
         }
-        function getCourses() {
-            $('#demo-cs-multiselect').html('');
-            var category = $('#category option:selected').attr('value');
-            var options = "";
-            switch (category) {
-                case "beginner":
-                    {
-                        var opt1 = "<option value='System Administration'>System Administration</option>";
-                        var opt2 = "<option value='Web Design'>Web Design</option>";
-                        var opt3 = "<option value='Oracle 11g'>Oracle 11g</option>";
-                        options = opt1 + opt2 + opt3;
-                    } break;
-                case "intermediate":
-                    {
-                        var opt4 = "<option value='JAVA SE Pro'>JAVA SE Professional</option>";
-                        options = opt4;
-                    } break;
-                case "professional":
-                    {
-                        var opt5 = "<option value='C# MVC'>C# MVC</option>";
-                        var opt6 = "<option value='PhP'>PhP</option>";
-                        var opt7 = "<option value='Django-Python'>Django-Python</option>";
-                        var opt8 = "<option value='AWS'>Amazon Web Service</option>";
-                        options = opt5 + opt6 + opt7 + opt8;
-                    } break;
-            }
-            $('#demo-cs-multiselect').html(options);
-            alert(options);
-            //$.ajax({
-            //    url: '/Training/GetCourses/',
-            //    type: 'GET',
-            //    data: { 'category': category }
-            //}).done(function (partialViewResult) {
-            //    $("#courses-select-div").html(partialViewResult);
-            //});
-        }
+        
     </script>
 }

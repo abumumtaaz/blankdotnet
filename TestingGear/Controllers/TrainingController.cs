@@ -23,7 +23,7 @@ namespace TestingGear.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Lau2015(string name, string mail, string phone, string address,
+        public ActionResult Lau2015(string name, string mail, string phone, string address,
             string courses)
         {
             try
@@ -39,7 +39,7 @@ namespace TestingGear.Controllers
                             extra, name, phone, mail, address, courses);
                     email.IsBodyHtml = false;
                     var smtp = new SmtpClient();
-                    await smtp.SendMailAsync(email);
+                    smtp.SendMailAsync(email);
                     ViewBag.Status = "SUCCESS";
                     ViewBag.StatusMessage = "Message successfully sent";
                 }
@@ -52,42 +52,7 @@ namespace TestingGear.Controllers
             return View();
         }
 
-        public PartialViewResult GetCourses(string category)
-        {
-            List<string> courses = new List<string>();
-            switch (category.ToLower())
-            {
-                case "beginner":
-                {
-                    courses.Add("System Administration");
-                    courses.Add("Web Design");
-                    courses.Add("Oracle 11g");
-                }break;
-                case "intermediate":
-                {
-                    courses.Add("JAVA SE Professional");
-                }
-                    break;
-                case "professional":
-                {
-                    courses.Add("C# MVC");
-                    courses.Add("PhP");
-                    courses.Add("Django-Python");
-                    courses.Add("Amazon Web Service");
-                }
-                    break;
-                default:
-                {
-                    courses.Add("System Administration");
-                    courses.Add("Web Design");
-                    courses.Add("Oracle 11g");
-                }
-                    break;
-            }
-            TempData["courses"] = courses;
-            TempData.Keep("courses");
-            return PartialView("_CoursesPartial");
-        }
+        
 
     }
 }
