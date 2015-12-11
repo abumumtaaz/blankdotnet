@@ -72,7 +72,7 @@ namespace TestingGear.Controllers
 
         public ActionResult Products()
         {
-            return null;
+            return View();
         }
 
         [HttpGet]
