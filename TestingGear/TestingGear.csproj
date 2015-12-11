@@ -163,6 +163,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TrainingController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -189,6 +190,7 @@
     <Content Include="Content\fonts\fontello\css\fontello.css" />
     <Content Include="Content\fonts\fontello\font\fontello3904.svg" />
     <Content Include="Content\images\avatar.jpg" />
+    <Content Include="Content\images\background-img-1.jpg" />
     <Content Include="Content\images\blog-1-thumb.jpg" />
     <Content Include="Content\images\blog-1.jpg" />
     <Content Include="Content\images\blog-2.jpg" />
@@ -277,6 +279,15 @@
     <Content Include="Content\js\custom.js" />
     <Content Include="Content\js\google.map.config.js" />
     <Content Include="Content\js\template.js" />
+    <Content Include="Content\nifty\bootstrap-select\bootstrap-select.min.css" />
+    <Content Include="Content\nifty\bootstrap-select\bootstrap-select.min.js" />
+    <Content Include="Content\nifty\bootstrap-tagsinput\bootstrap-tagsinput.css" />
+    <Content Include="Content\nifty\bootstrap-tagsinput\bootstrap-tagsinput.min.js" />
+    <Content Include="Content\nifty\chosen\chosen-sprite%402x.html" />
+    <Content Include="Content\nifty\chosen\chosen-sprite.html" />
+    <Content Include="Content\nifty\chosen\chosen.jquery.min.js" />
+    <Content Include="Content\nifty\chosen\chosen.min.css" />
+    <Content Include="Content\nifty\demo\form-component.js" />
     <Content Include="Content\plugins\bootstrap-notify\bootstrap-notify.js" />
     <Content Include="Content\plugins\charts\Chart.js" />
     <Content Include="Content\plugins\hover\hover-min.css" />
@@ -341,6 +352,8 @@
     <Content Include="Content\plugins\waypoints\jquery.waypoints.min.js" />
     <Content Include="Content\style-switcher\style-switcher.css" />
     <Content Include="Content\style-switcher\style-switcher.js" />
+    <Content Include="Content\videos\restaurant-video-banner-poster.jpg" />
+    <Content Include="Content\videos\video-banner-poster.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.eot" />
@@ -411,6 +424,10 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\Services.cshtml" />
+    <None Include="Views\Home\ErrorPage.cshtml" />
+    <None Include="Views\Home\Training2015.cshtml" />
+    <None Include="Views\Training\Lau2015.cshtml" />
+    <None Include="Views\Training\_CoursesPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

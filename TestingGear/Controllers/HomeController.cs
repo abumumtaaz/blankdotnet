@@ -38,7 +38,7 @@ namespace TestingGear.Controllers
             {
                 var from = ConfigurationManager.AppSettings.Get("UserID");
                 var password = ConfigurationManager.AppSettings.Get("Password");
-                using (var email = new MailMessage(from, "highcontech@gmail.com"))
+                using (var email = new MailMessage(from, "yusuf.oguntola@gmail.com"))
                 {
                     email.Subject = "Contact - " + subject;
                     email.Body = name + " sent a message from within the ganaf website. \nMessage Content: \n" + message + "\n\nEmail Address: " + uEmail;
@@ -49,7 +49,6 @@ namespace TestingGear.Controllers
                         EnableSsl = true
                     };
                     var networkCredential = new NetworkCredential(from, password);
-                    smtp.UseDefaultCredentials = true;
                     smtp.Credentials = networkCredential;
                     smtp.Port = 587;
                     smtp.Send(email);
@@ -74,6 +73,17 @@ namespace TestingGear.Controllers
         public ActionResult Products()
         {
             return null;
+        }
+
+        [HttpGet]
+        public ActionResult Training2015()
+        {
+            return View();
+        }
+
+        public ActionResult ErrorPage()
+        {
+            return View();
         }
     }
 }

@@ -56,6 +56,7 @@
 
     <!-- Custom css -->
     <link href="~/Content/css/custom.css" rel="stylesheet">
+    @RenderSection("styles", required:false)
 </head>
 
 <!-- body classes:  -->
@@ -249,6 +250,7 @@
                                                         <ul class="dropdown-menu">
                                                             <li><a href="/Home/Services">Services</a></li>
                                                             <li><a href="/Home/Products">Products</a></li>
+                                                            <li><a href="/Training/Lau2015">Training 2015</a></li>
                                                         </ul>
                                                     </li>
                                                     <!-- mega-menu end -->
@@ -322,6 +324,7 @@
                                             <li><a href="#">Privacy</a></li>*@
                                             <li><a href="/Home/Contact">Contact</a></li>
                                             <li><a href="/Home/About">About</a></li>
+                                            <li><a href="/Training/Lau2015">Training 2015</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -570,8 +573,7 @@
     <!-- Custom Scripts -->
     <script type="text/javascript" src="~/Content/js/custom.js"></script>
 
-    @Scripts.Render("~/bundles/jquery")
-    @RenderSection("scripts", required: false)
+    @*@Scripts.Render("~/bundles/jquery")*@
     <!-- Color Switcher (Remove these lines) -->
     <script type="text/javascript" src="~/Content/style-switcher/style-switcher.js"></script>
     <div class="style-switcher closed">
@@ -625,32 +627,35 @@
     <!-- Color Switcher End -->
 
     <!-- Pure chat script -->
-    <script type='text/javascript' data-cfasync='false'>
-        window.purechatApi = {
-            l: [],
-            t: [],
-            on: function () {
-                this.l.push(arguments);
+<script type='text/javascript' data-cfasync='false'>
+    window.purechatApi = {
+        l: [],
+        t: [],
+        on: function() {
+            this.l.push(arguments);
+        }
+    };
+    (function() {
+        var done = false;
+        var script = document.createElement('script');
+        script.async = true;
+        script.type = 'text/javascript';
+        script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript';
+        document.getElementsByTagName('HEAD').item(0).appendChild(script);
+        script.onreadystatechange = script.onload = function(e) {
+            if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+                var w = new PCWidget(
+                {
+                    c: 'a1e49c0a-064e-414b-b061-96baaac539d7',
+                    f: true
+                });
+                done = true;
             }
-        }; (function () {
-            var done = false;
-            var script = document.createElement('script');
-            script.async = true;
-            script.type = 'text/javascript';
-            script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript';
-            document.getElementsByTagName('HEAD').item(0).appendChild(script);
-            script.onreadystatechange = script.onload = function (e) {
-                if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
-                    var w = new PCWidget(
-                    {
-                        c: 'a1e49c0a-064e-414b-b061-96baaac539d7',
-                        f: true
-                    });
-                    done = true;
-                }
-            };
-        })();
-    </script>
+        };
+    })();
+</script>
+    
+    @RenderSection("scripts", required: false)
 </body>
 
 <!-- Mirrored from htmlcoder.me/preview/the_project/v.1.0/template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Jun 2015 23:43:34 GMT -->

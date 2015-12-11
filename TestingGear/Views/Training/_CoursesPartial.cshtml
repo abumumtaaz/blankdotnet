@@ -1,0 +1,13 @@
+﻿<select id="demo-cs-multiselect" data-placeholder="Choose courses..." multiple tabindex="4" name="courses">
+    @{
+        var courses = TempData["courses"] as List<string>;
+        if (courses != null)
+        {
+        
+            foreach (var course in courses)
+            {
+                <option value="@course">@course</option>
+            }
+        }
+    }
+</select>

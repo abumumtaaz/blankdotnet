@@ -1,0 +1,340 @@
+﻿@section featured
+{
+    <!-- banner start -->
+    <!-- ================ -->
+    <div class="banner dark-translucent-bg" style="background-image: url('/Content/images/page-services-banner.jpg'); background-position: 50% 32%;">
+        <!-- breadcrumb start -->
+        <!-- ================ -->
+        <div class="breadcrumb-container">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home pr-10"></i><a class="link-dark" href="index.html">Home</a></li>
+                    <li class="active">Page Services</li>
+                </ol>
+            </div>
+        </div>
+        <!-- breadcrumb end -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 text-center col-md-offset-2 pv-20">
+                    <h2 class="title object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">What We <strong>are offering</strong></h2>
+                    <div class="separator object-non-visible mt-10" data-animation-effect="fadeIn" data-effect-delay="100"></div>
+                    <p class="text-center object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">
+                        The mind-blowing oppotunity you have hoped for! You couldn't have been more flabbergasted!
+                        We are offering the hottest courses at the most astonishing fee and they would still be taught to the atomic stage by professionals
+                        who have been using each of the specified technologies for years.
+                        Nothing teaches better than experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner end -->
+
+    @{
+        if (ViewBag.Status != null)
+        {
+            if (ViewBag.Status.Equals("SUCCESS"))
+            {
+        <div class="" style="background-color: green">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <div class="row">
+                                <h2>Registration Success</h2>
+                                <p style="color: white">Congrats! You have successfully registered for the LAUTECH2015 CodeTrain Training!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            }
+            else
+            {
+        <div class="" style="background-color: red">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <div class="row">
+                                <h2>Registration Error</h2>
+                                <p style="color: white">Sorry! We could not process your request, please retry!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            }
+        }
+    }
+
+
+    <section class="clearfix pv-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="text-center">Our list of courses</h3>
+                    <div class="separator"></div>
+
+
+                    <!-- pricing tables start -->
+                    <!-- ================ -->
+                    <div class="pricing-tables stripped object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="100">
+                        <div class="row grid-space-0">
+                            <!-- pricing table start -->
+                            <!-- ================ -->
+                            <div class="col-sm-4 plan stripped">
+                                <div class="header default-bg">
+                                    <h3>Beginners</h3>
+                                    <div class="price"><span>#5000</span> Each</div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="pt-popover" data-toggle="popover" data-placement="right" data-content="It's an abridged form of a combination of Microsoft MCTS70-680 and CompTIA A+. It would teach you to be a computer system expert" title="" data-original-title="System Administration" data-trigger="hover">System Administration</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pt-popover" data-toggle="popover" data-placement="right" data-content="Website design has been revolutionalized. The latest version of HTML, CSS, JavaScript and JQuery would be taught to get you really equiped" title="" data-original-title="Web Design">Web Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pt-popover" data-toggle="popover" data-placement="right" data-content="Oracle database 11g" title="" data-original-title="Oracle 11g">Oracle 11g</a>
+                                    </li>
+
+                                    <li>
+                                        <p class="text-danger">
+                                            Choose one or more of the three courses in this category to get started in the world of IT.
+                                            You can't afford to spend these 3weeks without adding something to what you have previously learnt.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- pricing table end -->
+
+                            <!-- pricing table start -->
+                            <!-- ================ -->
+                            <div class="col-sm-4 plan stripped best-value">
+                                <div class="header default-bg" style="background-color: maroon">
+                                    <h3>Intermediate</h3>
+                                    <div class="price"><span>#5000</span> Each</div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="pt-popover" data-toggle="popover" data-placement="right" data-content="Java has been one of the programming language of choice for years. Knowing just the basic is not enough, become a professional instead. (NB: You should know the basics of JAVA to register)" title="" data-original-title="Java SE Professional">JAVA SE Professional</a>
+
+                                    </li>
+                                    <li>
+                                        <p class="text-danger">
+                                            A good grasp of JAVA SE should be your starting point...
+                                            Let it be a matter of compulsion for you to understand the core of Java Standard Edition (SE).
+                                            It's much, cumbersome and tough; but not when <b>WE</b> teach you.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- pricing table end -->
+
+                            <!-- pricing table start -->
+                            <!-- ================ -->
+                            <div class="col-sm-4 plan">
+                                <div class="header dark-bg" style="background-color: green">
+                                    <h3>Professional</h3>
+                                    <div class="price"><span>#5000</span> Each</div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="pt-popover" data-toggle="popover" data-placement="right" data-content="Enterprise edition of C#. With this you would be able to develop web apps so a knowledge of web design (an idea is enough) and any programming language is required." title="" data-original-title="C# MVC">C# MVC</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pt-popover" data-toggle="popover" data-placement="right" data-content="PhP has remained the most web development language. Knowing the core of it requres some trick. A knowledge of web design (an idea is enough) is required." title="" data-original-title="PhP">PhP</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pt-popover" data-toggle="popover" data-placement="right" data-content="Django is an enterprise framework for python. Web development cannot be more easy! You would almost hate other language when you work with django. A knowledge of web design (an idea is enough) as well as one programming language (prefferably python) is required." title="" data-original-title="Django-Python">Django-Python</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pt-popover" data-toggle="popover" data-placement="right" data-content="Cloud computing is the technology of choice in this decade. Getting a grasp of AWS would make you the hottest working with cloud computing." title="" data-original-title="AWS">Amazon Web Service</a>
+                                    </li>
+                                    <li>
+                                        <p class="text-danger">You think you are already a professional? Try one of these.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- pricing table end -->
+
+                        </div>
+                    </div>
+                    <!-- pricing tables end -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section end -->
+
+    <!-- section start -->
+    <!-- ================ -->
+    <section class="video-background-banner pv-40 dark-translucent-bg" style="height: 750px;">
+        <div class="container">
+            <div class="call-to-action text-center">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <h2 class="title">Register Now</h2>
+                        <p>There are limited spaces available! It would be cool for you to register now before all spaces are occupied.</p>
+
+                        <div class="separator"></div>
+
+                    </div>
+                </div>
+                <div class="row col-sm-8 col-sm-offset-2 white-bg">
+                    @using (Html.BeginForm("Lau2015", "Training", FormMethod.Post, new { enctype = "multipart/form-data", id="regForm" }))
+                    {
+                        <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label text-default">Full Name</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" id="name" name="name" placeholder="Full Name" type="text">
+                            </div>
+                            <br />
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label for="phone" class="col-sm-2 control-label text-default">Phone Number</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" name="phone" id="phone" placeholder="Phone" type="text">
+                            </div>
+                            <br />
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label for="email" class="col-sm-2 control-label text-default">Email</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" name="mail" id="email" placeholder="Email" type="email">
+                            </div>
+                            <br />
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label for="address" class="col-sm-2 control-label text-default">Address</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" placeholder="Address" type="text" id="address" name="address">
+                            </div>
+                            <br />
+                        </div>
+                        <br />
+                        @*<div class="form-group">
+                            <label for="category" class="col-sm-2 control-label text-default">Category</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="category" name="category" onchange="getCourses();">
+                                    <option>--Select Category--</option>
+                                    <option value="beginner">Beginner</option>
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="professional">Professional</option>
+                                </select>
+                            </div>
+                            <br />
+                        </div>
+                        <br />*@
+                        
+                        <div class="form-group">
+                            <label for="demo-cs-multiselect" class="col-sm-2 control-label text-default">Courses</label>
+                            <div class="col-sm-10" id="courses-select-div">
+                                <select id="demo-cs-multiselect" data-placeholder="Choose courses..." multiple tabindex="4">
+                                    <option value="System Administration">System Administration</option>
+                                    <option value="Web Design">Web Design</option>
+                                    <option value="Oracle 11g">Oracle 11g</option>
+                                    <option value="JAVA">JAVA SE Professional</option>
+                                    <option value="C# MVC">C# MVC</option>
+                                    <option value="PhP">PhP</option>
+                                    <option value="Django-Python">Django-Python</option>
+                                    <option value="AWS">Amazon Web Service</option>
+                                </select>
+
+                            </div>
+                            <br />
+                        </div>
+                        <br/>
+                        <input type="hidden" id="selected-courses" name="courses"/>
+                        
+                    }
+                    <input type="submit" value="Submit" class="submit-button btn btn-default" onclick="submitForm()">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section end -->
+}
+
+@section styles
+{
+    <link href="~/Content/nifty/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+
+
+    <!--Bootstrap Tags Input [ OPTIONAL ]-->
+    <link href="~/Content/nifty/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+
+
+    <!--Chosen [ OPTIONAL ]-->
+    <link href="~/Content/nifty/chosen/chosen.min.css" rel="stylesheet">
+}
+
+@section scripts
+{
+    <!--Bootstrap Select [ OPTIONAL ]-->
+    <script src="~/Content/nifty/bootstrap-select/bootstrap-select.min.js"></script>
+
+
+    <!--Bootstrap Tags Input [ OPTIONAL ]-->
+    <script src="~/Content/nifty/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+    <script src="~/Content/nifty/chosen/chosen.jquery.min.js"></script>
+    <!--Form Component [ SAMPLE ]-->
+    <script src="~/Content/nifty/demo/form-component.js"></script>
+    <script type="text/javascript">
+        function submitForm() {
+            var options = $('#demo-cs-multiselect').find('option');
+            var res = "";
+            options.each(function() {
+                if ($(this).is(':selected')) {
+                    res += $(this).attr('value') +", ";
+                }
+            });
+            $('#selected-courses').val(res);
+            $('#regForm').submit();
+        }
+        function getCourses() {
+            $('#demo-cs-multiselect').html('');
+            var category = $('#category option:selected').attr('value');
+            var options = "";
+            switch (category) {
+                case "beginner":
+                    {
+                        var opt1 = "<option value='System Administration'>System Administration</option>";
+                        var opt2 = "<option value='Web Design'>Web Design</option>";
+                        var opt3 = "<option value='Oracle 11g'>Oracle 11g</option>";
+                        options = opt1 + opt2 + opt3;
+                    } break;
+                case "intermediate":
+                    {
+                        var opt4 = "<option value='JAVA SE Pro'>JAVA SE Professional</option>";
+                        options = opt4;
+                    } break;
+                case "professional":
+                    {
+                        var opt5 = "<option value='C# MVC'>C# MVC</option>";
+                        var opt6 = "<option value='PhP'>PhP</option>";
+                        var opt7 = "<option value='Django-Python'>Django-Python</option>";
+                        var opt8 = "<option value='AWS'>Amazon Web Service</option>";
+                        options = opt5 + opt6 + opt7 + opt8;
+                    } break;
+            }
+            $('#demo-cs-multiselect').html(options);
+            alert(options);
+            //$.ajax({
+            //    url: '/Training/GetCourses/',
+            //    type: 'GET',
+            //    data: { 'category': category }
+            //}).done(function (partialViewResult) {
+            //    $("#courses-select-div").html(partialViewResult);
+            //});
+        }
+    </script>
+}
